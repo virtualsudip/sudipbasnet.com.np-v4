@@ -42,9 +42,12 @@ export default function Privacy() {
     {
       title: "Contact Us",
       content: [
-        "For privacy questions, contact us at info@sudipbasnet.com.np",
-        "We respond to all inquiries within 30 days."
-      ]
+  "For privacy questions, contact us at ",
+  <a key="email" href="mailto:info@sudipbasnet.com.np" className="text-blue-600 dark:text-blue-400 underline">
+    info@sudipbasnet.com.np
+  </a>,
+  " We respond to all inquiries within 30 days."
+]
     }
   ];
 
