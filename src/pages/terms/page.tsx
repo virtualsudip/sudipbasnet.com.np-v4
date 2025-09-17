@@ -1,6 +1,6 @@
-
 import Header from '../../components/feature/Header';
 import Footer from '../../components/feature/Footer';
+import { Info, ShieldCheck, Mail } from "lucide-react";
 
 export default function Terms() {
   const sections = [
@@ -62,7 +62,15 @@ export default function Terms() {
     {
       title: "Contact",
       content: [
-        "Questions about these terms? Contact us at info@sudipbasnet.com.np"
+        <>
+          Questions about these terms? Contact us at{" "}
+          <a
+            href="mailto:info@sudipbasnet.com.np"
+            className="text-blue-600 dark:text-blue-400 underline"
+          >
+            info@sudipbasnet.com.np
+          </a>.
+        </>
       ]
     }
   ];
@@ -70,17 +78,15 @@ export default function Terms() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header />
-      
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Terms & Conditions</h1>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Terms & Conditions
+          </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Last updated: {new Date().toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}
+            Last updated: September 17, 2025
           </p>
         </div>
 
@@ -94,7 +100,10 @@ export default function Terms() {
         {/* Terms Sections */}
         <div className="space-y-6">
           {sections.map((section, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+            <div
+              key={index}
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6"
+            >
               <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                 <span className="w-6 h-6 bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 rounded-lg flex items-center justify-center text-sm font-bold mr-3">
                   {index + 1}
@@ -103,7 +112,10 @@ export default function Terms() {
               </h2>
               <div className="space-y-3">
                 {section.content.map((paragraph, pIndex) => (
-                  <p key={pIndex} className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p
+                    key={pIndex}
+                    className="text-gray-700 dark:text-gray-300 leading-relaxed"
+                  >
                     {paragraph}
                   </p>
                 ))}
@@ -115,9 +127,11 @@ export default function Terms() {
         {/* Important Notice */}
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl p-6 mt-8">
           <div className="flex items-start">
-            <i className="ri-information-line text-xl text-yellow-600 dark:text-yellow-400 mr-3 flex-shrink-0 mt-1"></i>
+            <Info className="text-xl text-yellow-600 dark:text-yellow-400 mr-3 flex-shrink-0 mt-1" />
             <div>
-              <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-300 mb-2">Important Notice</h3>
+              <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-300 mb-2">
+                Important Notice
+              </h3>
               <p className="text-yellow-800 dark:text-yellow-200">
                 These terms constitute a legally binding agreement. Please contact us if you have questions.
               </p>
@@ -128,18 +142,18 @@ export default function Terms() {
         {/* Quick Links */}
         <div className="text-center mt-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-xl">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/privacy" 
+            <a
+              href="/privacy"
               className="inline-flex items-center px-4 py-2 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors cursor-pointer"
             >
-              <i className="ri-shield-check-line mr-2"></i>
+              <ShieldCheck className="mr-2 w-4 h-4" />
               Privacy Policy
             </a>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="inline-flex items-center px-4 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors cursor-pointer"
             >
-              <i className="ri-mail-line mr-2"></i>
+              <Mail className="mr-2 w-4 h-4" />
               Contact Us
             </a>
           </div>
