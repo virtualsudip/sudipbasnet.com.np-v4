@@ -60,11 +60,7 @@ export default function Privacy() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Privacy Policy</h1>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Last updated: {new Date().toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}
+            Last updated: September 17, 2025
           </p>
         </div>
 
