@@ -1,6 +1,6 @@
-
 import Header from '../../components/feature/Header';
 import Footer from '../../components/feature/Footer';
+import { FileText, Mail } from "lucide-react";
 
 export default function Privacy() {
   const sections = [
@@ -42,23 +42,30 @@ export default function Privacy() {
     {
       title: "Contact Us",
       content: [
-  "For privacy questions, contact us at ",
-  <a key="email" href="mailto:info@sudipbasnet.com.np" className="text-blue-600 dark:text-blue-400 underline">
-    info@sudipbasnet.com.np
-  </a>,
-  " We respond to all inquiries within 30 days."
-]
+        <>
+          For privacy questions, contact us at{" "}
+          <a
+            href="mailto:info@sudipbasnet.com.np"
+            className="text-blue-600 dark:text-blue-400 underline"
+          >
+            info@sudipbasnet.com.np
+          </a>
+          . We respond to all inquiries within 30 days.
+        </>
+      ]
     }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header />
-      
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Privacy Policy</h1>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Privacy Policy
+          </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300">
             Last updated: September 17, 2025
           </p>
@@ -67,15 +74,19 @@ export default function Privacy() {
         {/* Introduction */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8 mb-8">
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            We are committed to protecting your privacy. This policy explains how we collect, use, and protect 
-            your information when you visit our website. By using our website, you agree to this policy.
+            We are committed to protecting your privacy. This policy explains
+            how we collect, use, and protect your information when you visit our
+            website. By using our website, you agree to this policy.
           </p>
         </div>
 
         {/* Policy Sections */}
         <div className="space-y-6">
           {sections.map((section, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+            <div
+              key={index}
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6"
+            >
               <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                 <span className="w-6 h-6 bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300 rounded-lg flex items-center justify-center text-sm font-bold mr-3">
                   {index + 1}
@@ -84,7 +95,10 @@ export default function Privacy() {
               </h2>
               <div className="space-y-3">
                 {section.content.map((paragraph, pIndex) => (
-                  <p key={pIndex} className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p
+                    key={pIndex}
+                    className="text-gray-700 dark:text-gray-300 leading-relaxed"
+                  >
                     {paragraph}
                   </p>
                 ))}
@@ -96,18 +110,18 @@ export default function Privacy() {
         {/* Quick Links */}
         <div className="text-center mt-12 p-6 bg-gray-100 dark:bg-gray-800 rounded-xl">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/terms" 
+            <a
+              href="/terms"
               className="inline-flex items-center px-4 py-2 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors cursor-pointer"
             >
-              <i className="ri-file-text-line mr-2"></i>
+              <FileText className="mr-2 w-4 h-4" />
               Terms & Conditions
             </a>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="inline-flex items-center px-4 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors cursor-pointer"
             >
-              <i className="ri-mail-line mr-2"></i>
+              <Mail className="mr-2 w-4 h-4" />
               Contact Us
             </a>
           </div>
